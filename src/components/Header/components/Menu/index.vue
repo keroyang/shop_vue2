@@ -2,8 +2,8 @@
 
     <b-navbar-nav class="m-auto custom-nav">
 
-      <b-nav-item active href="#">主页</b-nav-item>
-      <b-nav-item-dropdown text="男装" right>
+      <b-nav-item active :to="'/home'">主页</b-nav-item>
+      <b-nav-item-dropdown text="男装" left>
         <template #default>
           <div class="mega-menu p-3 ">
             <div class="row">
@@ -97,8 +97,8 @@
         <b-dropdown-item href="#">zh-TW</b-dropdown-item>
       </b-nav-item-dropdown>
       <b-nav-form>
-        <b-form-input size="sm" class="mr-sm-2" placeholder="搜索商品"></b-form-input>
-        <b-button size="sm" class="my-2 my-sm-0" type="submit">搜索</b-button>
+        <b-form-input size="sm" class="mr-sm-2" v-model="keyWord" placeholder="搜索商品"></b-form-input>
+        <b-button size="sm" class="my-2 my-sm-0" @click="goSearch">搜索</b-button>
       </b-nav-form>
     </b-navbar-nav>
 
@@ -106,7 +106,28 @@
 </template>
 <script>
 export default {
-  name: "index"
+  name: "index",
+  data() {
+    return{
+      keyWord:""
+    }
+  },
+  methods:{
+    goSearch(){
+
+      let key = this.keyWord?.trim()||'';
+      if(this.$route.name==='search'&&this.$route.query.k===key){
+        return;
+      }
+      //第一种：字符串形式
+      // this.$router.push("/search/"+this.keyWord+"?keyWord="+this.keyWord);
+      // //第二种：模版字符串
+      // this.$router.push(`/search/${this.keyWord}?k=${this.keyWord.toUpperCase()}`);
+      //第三种对象传递方式，此时需要在router的index.js 中给 路由一个 name属性
+      this.$router.push({name:'search',params:{keyWord:this.key||undefined},query:{k:this.keyWord}});
+
+    }
+  }
 }
 </script>
 <style lang="less">

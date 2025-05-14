@@ -1,10 +1,8 @@
 <template>
   <div id="app">
     <Header/>
-    <div style="min-height: 2000px">
-      我是中间部门
-    </div>
-
+    <!--路由组件出口的地方-->
+    <router-view></router-view>
     <Footer/>
   </div>
 </template>

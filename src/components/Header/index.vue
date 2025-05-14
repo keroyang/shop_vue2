@@ -12,7 +12,7 @@
           <b-navbar toggleable="lg" class="sticky-top">
 
 
-            <b-navbar-brand href="#">
+            <b-navbar-brand :to="{name: 'home'}">
               <img class="logo" :src="require('./images/logo.png')" alt="logo"/>
             </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -82,7 +82,6 @@ export default {
   methods: {
     handleScroll() {
         let scrollTop = window.scrollY || document.documentElement.scrollTop;
-        console.log(scrollTop);
         this.isScrolled = scrollTop>=200;
     }
 
