@@ -1,17 +1,22 @@
 <template>
   <div>
 
-    <div class="site_header animated">
+    <header class="site_header animated" ref="header"
+            :class="{
+              'header-scroll_bg_light':isScrolled,
+              'fadeInDown':isScrolled
+            }"
+            >
       <div class="bottom_header">
         <div class="container">
-          <b-navbar toggleable="lg" >
+          <b-navbar toggleable="lg" class="sticky-top">
 
 
             <b-navbar-brand href="#">
               <img class="logo" :src="require('./images/logo.png')" alt="logo"/>
             </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
+            <b-collapse id="nav-collapse" is-nav>
             <Menu />
 
             <div class="top_social_link">
@@ -42,13 +47,14 @@
                 </div>
               </div>
             </div>
+            </b-collapse>
 
           </b-navbar>
         </div>
 
       </div>
 
-    </div>
+    </header>
 
   </div>
 </template>
@@ -61,6 +67,25 @@ export default {
   name: "Header",
   components: {
     Menu
+  },
+  data(){
+    return {
+      isScrolled:false
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll)
+  },
+  beforeMount() {
+    window.removeEventListener("scroll", this.handleScroll)
+  },
+  methods: {
+    handleScroll() {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        console.log(scrollTop);
+        this.isScrolled = scrollTop>=200;
+    }
+
   }
 
 }
@@ -96,6 +121,15 @@ export default {
 }
 .cursor-pointer{
   cursor: pointer;
+}
+
+.header-scroll_bg_light{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1010;
+  top: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 </style>

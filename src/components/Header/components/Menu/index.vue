@@ -1,5 +1,5 @@
 <template>
-  <b-collapse id="nav-collapse" is-nav>
+
     <b-navbar-nav class="m-auto custom-nav">
 
       <b-nav-item active href="#">主页</b-nav-item>
@@ -103,7 +103,6 @@
     </b-navbar-nav>
 
 
-  </b-collapse>
 </template>
 <script>
 export default {

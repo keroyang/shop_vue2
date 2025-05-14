@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <Header/>
+    <div style="min-height: 2000px">
+      我是中间部门
+    </div>
 
     <Footer/>
   </div>
