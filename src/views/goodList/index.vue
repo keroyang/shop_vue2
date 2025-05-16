@@ -70,6 +70,7 @@ export default {
         imgUrl: require('@/assets/img/product1.jpg'),
         displayName: 'Product fashion',
         price: '300.00',
+        isFavorite: false,
         rate: 3
       }]
     }
@@ -104,6 +105,10 @@ export default {
       console.log(val);
     },
     handleAddWish(item){
+
+      setTimeout(()=>{
+        item.isFavorite=true;
+      },1000)
       console.log(item);
     },
     handleAddCart(item){

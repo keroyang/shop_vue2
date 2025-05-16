@@ -7,8 +7,10 @@
             <div>
               <img :src=item.imgUrl alt="" @click="handleImgClick(item)"/>
               <div class="wish_list animated fadeInUp" @click="addWish(item)">
-                <span>添加至心愿单</span>
-                <i class="far fa-heart"></i>
+                <span>{{item.isFavorite?'已在心愿单':'添加至心愿单'  }}</span>
+                <i class="far fa-heart"  v-if="!item.isFavorite"></i>
+                <i class="fas fa-heart"  v-if="item.isFavorite"></i>
+
               </div>
             </div>
           </div>
