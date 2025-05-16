@@ -1,0 +1,126 @@
+.banner-section{
+
+  .owl-carousel{
+    width: 100%;
+    z-index: 1;
+  }
+  .custom-caption{
+    .container{
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      z-index: 10;
+
+
+      .carousel-content{
+        padding:5rem 0;
+
+        .slider-desc{
+          animation-delay: 1s;
+          max-width: 500px;
+          margin: 1rem 0;
+          font-family: "Conv_Raleway-Medium";
+
+        }
+
+        .slider-title{
+          animation-delay: 1s;
+          font-family: "Conv_Playball-Regular";
+        }
+      }
+
+    }
+  }
+  .banner-carousel{
+
+    height:600px;
+    background-size: cover !important;
+    background-position: top center !important;
+
+    display:block;
+    width:100%;
+    z-index: 1;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+
+
+
+
+
+    .carousel-content{
+
+      .animated{
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+    }
+  }
+
+
+
+}
+.carousel-inner,
+.carousel-item,
+.carousel-item img {
+  height: 600px ;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.custom-indicator{
+  position: absolute;
+
+  font-size: 1.3rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+
+}
+.custom-indicator.right{
+  bottom: 0;
+  padding: 0 2rem;
+  right: 0;
+  width:15%;
+  height:100%;
+  text-align:right;
+  align-items: flex-end;
+}
+.custom-indicator.left{
+  bottom: 0;
+  padding: 0 2rem;
+  left: 0;
+  width:15%;
+  height:100%;
+  text-align:left;
+  align-items: flex-start;
+}
+
+.owl-dot{
+  position:relative;
+  width:fit-content;
+  padding-bottom: .5rem;
+  margin-bottom: .5rem;
+  cursor: pointer;
+  font-family: "Conv_Playball-Regular";
+}
+.owl-dot:before {
+  content:'';
+  position: absolute;
+  right:0;
+  height:2px;
+  background: #FFFFFF;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  bottom: 0;
+}
+.owl-dot:hover:before {
+  width: 200%;
+}
+.owl-dot.active:before {
+  width: 200%;
+}

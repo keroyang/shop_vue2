@@ -6,7 +6,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import '@/assets/css/inc/plugins.css'
-
+import '@/assets/css/style.less'
+import '@/assets/css/home.less'
 
 //引入路由
 import router from './router'
