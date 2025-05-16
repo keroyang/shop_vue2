@@ -14,7 +14,8 @@
     "less": "^4.3.0",
     "less-loader": "^12.3.0",
     "vue": "^2.7.16",
-    "vue-router": "^3.6.5"
+    "vue-router": "^3.6.5",
+    "vue-star-rating": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

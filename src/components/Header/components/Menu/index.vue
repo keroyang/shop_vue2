@@ -8,7 +8,7 @@
           <div class="mega-menu p-3 ">
             <div class="row">
               <div class="col-lg-4">
-                <a class="dropdown-item font-weight-bold" href="#">全部分类</a>
+                <b-dropdown-item class="font-weight-bold " :to="'/goodList/男装'"><strong>全部分类</strong></b-dropdown-item>
                 <a class="dropdown-item" href="#">Blazers</a>
                 <a class="dropdown-item" href="#">Loungewear</a>
                 <a class="dropdown-item" href="#">Plus Size</a>
@@ -181,6 +181,9 @@ export default {
   box-shadow: none;
   background: transparent;
 }
-
+.dropdown-item:active {
+  background-color: transparent !important;
+  color:inherit;
+}
 
 </style>
