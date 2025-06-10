@@ -90,7 +90,7 @@
         <b-dropdown-item href="#">Bomber Jackets</b-dropdown-item>
         <b-dropdown-item href="#">Coats</b-dropdown-item>
       </b-nav-item-dropdown>
-      <b-nav-item href="#">帮助中心</b-nav-item>
+      <b-nav-item :to="'/help'">帮助中心</b-nav-item>
       <b-nav-item-dropdown text="语言" left>
         <b-dropdown-item href="#">EN</b-dropdown-item>
         <b-dropdown-item href="#">zh-CN</b-dropdown-item>

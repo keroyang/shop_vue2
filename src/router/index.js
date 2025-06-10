@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 import Home from '@/views/Home'
 import Search from "@/views/search";
 import GoodList from "@/views/goodList";
+import Help from "@/views/Help";
 //配置路由
 //通过export 对外暴露
 export default new VueRouter({
@@ -35,6 +36,15 @@ export default new VueRouter({
             },
             props: true
         },
+        {
+          path: '/help',
+          name: 'help',
+          component: Help,
+          meta:{
+
+          }
+        },
+
         //重定向
         {
             path: '/',

@@ -1,3 +1,4 @@
+//引入vue
 import Vue from 'vue'
 import App from './App.vue'
 
@@ -18,7 +19,7 @@ Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
 
-
+//关闭vue的生产提示
 Vue.config.productionTip = false
 
 new Vue({
